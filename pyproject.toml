@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lightweight_ratelimit_django"
+version = "1.0.0"
+authors = [
+  { name="Vazgen Ayvazyan", email="a.wasgen@gmail.com" },
+]
+description = "My Django rate limiting app."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+packages = ["lightweight_ratelimit_django"]
+
+[tool.coverage.run]
+omit = [
+    "*tests*",
+    "*/tests/*",
+    "*migrations*",
+    "*/migrations/*",
+    "*__init__*",
+    "manage.py",
+    "dflib_test.py",
+    "debug_*.py",
+    # Recommended additions for Django apps:
+    "*settings*",
+    "*urls*",
+]
