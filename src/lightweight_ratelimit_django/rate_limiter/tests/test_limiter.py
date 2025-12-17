@@ -5,7 +5,7 @@ from unittest.mock import patch
 
 from lightweight_ratelimit_django.rate_limiter.limiter import RateLimiter 
 
-# --- A simple view function to test against ---
+
 def mock_view(request):
     return JsonResponse({"status": "OK"}, status=200)
 

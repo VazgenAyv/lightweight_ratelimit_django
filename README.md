@@ -78,6 +78,21 @@ def protected_api_view(request):
 - Default limit: `50/h`
 - Default `exclude_user=False` (meaning if the request.user is logged in, limit will be calculated on the user)
 
+
+### Parameters
+- `limit`
+    - accepts the following format `{call limit}/{time span}`
+        - supported timespan options:
+            - `m` for minute
+            - `h` for hour
+            - `d` for day
+
+- `methods`
+    - list of accepted call methods: `["GET", "POST"...]`
+
+- `exclude user`
+    - Boolean value if the program shall omit `request.user` or not
+
 ## Example with custom configuration
 ```
 @RateLimiter.view_rate_limit(limit="10/m", methods=["POST"], exclude_user=True)

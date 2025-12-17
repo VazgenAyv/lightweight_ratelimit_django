@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "lightweight-ratelimit-django"
-version = "1.0.6"
+version = "1.0.7"
 description = "Lightweight, decorator-based rate limiting for Django views using TTL-based cache keys."
 readme = "README.md"
 requires-python = ">=3.11"
@@ -22,3 +22,7 @@ package-dir = { "" = "src" }
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[project.urls]
+Homepage = "https://github.com/VazgenAyv/lightweight_ratelimit_django"
+Repository = "https://github.com/VazgenAyv/lightweight_ratelimit_django.git"
